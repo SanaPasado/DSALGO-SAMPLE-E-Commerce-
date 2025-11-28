@@ -1,13 +1,15 @@
-
+import Footer from './components/Footer';
 import Header from './components/Header';  
+import Homescreen from './screens/Homescreen';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Footer />
-      
-    </div>
+    <Router>
+      <Header/>
+      <Route path='/' component={Homescreen} exact />
+      <Footer/>
+    </Router>
   );
 }
 
